@@ -1,14 +1,18 @@
-/* Reset default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Custom Font Declarations */
+@font-face {
+  font-family: 'Tahoma';
+  src: url('/static/assets/Tahoma.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Define color variables */
-:root {
-  --blue-color: #0d6efd;
-  --orange-color: #f89422;
+@font-face {
+  font-family: 'Tahoma-Bold';
+  src: url('/static/assets/Tahoma-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Base styles */
@@ -17,6 +21,7 @@ html, body {
   padding: 0;
   overflow: hidden;
   height: 100vh;
+  font-family: 'Tahoma', sans-serif;
 }
 
 /* Split screen container */
@@ -50,7 +55,6 @@ html, body {
   padding: clamp(1rem, 2vw, 2rem);
   color: black;
   font-size: clamp(16px, 2vw, 24px);
-  border: 1px solid black;
   overflow-y: auto;
 }
 
@@ -88,6 +92,7 @@ html, body {
   font-size: clamp(3rem, 6.5vw, 6.50rem);
   margin: clamp(1rem, 2vw, 2rem) 0;
   font-weight: 700;
+  font-family: 'Tahoma-Bold', 'Inter', sans-serif;
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -111,6 +116,24 @@ html, body {
   color: var(--orange-color);
   font-size: clamp(16px, 2vw, 24px);
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+/* Right panel text styles */
+.right-title {
+  font-family: 'Tahoma-Bold', sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: 1rem;
+}
+
+.right-subtitle {
+  font-family: 'Tahoma-Bold', sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  margin-bottom: 2rem;
+}
+
+.right-info {
+  font-size: clamp(16px, 2vw, 24px);
+  margin-bottom: 1rem;
 }
 
 /* Ontario Pride section */
