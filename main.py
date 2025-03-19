@@ -13,7 +13,7 @@ def index():
 
 @app.route('/test')
 def test():
-    return render_template('index.html')
+    return render_template('test/index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
