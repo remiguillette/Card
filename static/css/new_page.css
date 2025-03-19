@@ -59,6 +59,9 @@ html, body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 1vh;
 }
 
 .right-panel {
