@@ -146,7 +146,7 @@ html, body {
 .ontario-pride {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: left;
   justify-content: flex-end;
   gap: clamp(1rem, 2vw, 2rem);
   margin-top: clamp(1rem, 2vw, 2rem);
@@ -158,7 +158,7 @@ html, body {
   background-image: url('/static/assets/beaver.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   width: clamp(60px, 10vw, 120px);
   height: clamp(60px, 10vw, 120px);
   flex-shrink: 0;
