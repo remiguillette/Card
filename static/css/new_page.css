@@ -94,10 +94,16 @@ html, body {
   color: var(--orange-color);
 }
 
-.text-group, .company-text {
+.text-group {
   color: var(--orange-color);
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
   font-size: clamp(16px, 2vw, 24px);
+}
+
+.company-text {
+  color: var(--orange-color);
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(32px, 4vw, 48px);
 }
 
 .right-title {
