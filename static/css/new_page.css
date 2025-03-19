@@ -9,26 +9,14 @@
 :root {
   --blue-color: #0d6efd;
   --orange-color: #f89422;
-
-  /* Left panel text content */
-  --left-panel-title-first: 'Rémi';
-  --left-panel-title-last: 'Guillette';
-  --left-panel-text1: 'Group';
-  --left-panel-text2: 'Groupe';
-  --left-panel-text3-first: 'Rémi';
-  --left-panel-text3-last: 'Guillette';
-  --left-panel-text4: 'Public safety consulting firm';
-  --left-panel-text5: 'Cabinet-conseil en sécurité publique';
-  --left-panel-logo: url('/beaver.svg');
 }
 
 /* Base styles */
 html, body {
-  width: 4096px;
-  height: 2160px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  height: 100vh; /* Temporary for debugging */
 }
 
 /* Split screen container */
@@ -36,22 +24,33 @@ html, body {
   display: flex;
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 /* Left panel */
 .left-panel {
-  width: 50%;
+  flex: 1;
+  min-width: 50%;
   height: 100%;
   background-color: black;
   padding: 2rem;
+  color: var(--orange-color);
+  font-size: 24px;
+  border: 1px solid var(--orange-color); /* Debug border */
 }
 
 /* Right panel */
 .right-panel {
-  width: 50%;
+  flex: 1;
+  min-width: 50%;
   height: 100%;
   background-color: var(--orange-color);
   padding: 2rem;
+  color: black;
+  font-size: 24px;
+  border: 1px solid black; /* Debug border */
 }
 
 /* Remove unwanted elements */
