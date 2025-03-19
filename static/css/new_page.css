@@ -35,9 +35,10 @@ html, body {
   min-width: 50%;
   height: 100%;
   background-color: black;
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 2rem);
   color: var(--orange-color);
-  font-size: 24px;
+  font-size: clamp(16px, 2vw, 24px);
+  overflow-y: auto;
 }
 
 /* Right panel */
@@ -46,16 +47,17 @@ html, body {
   min-width: 50%;
   height: 100%;
   background-color: var(--orange-color);
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 2rem);
   color: black;
-  font-size: 24px;
-  border: 1px solid black; /* Debug border */
+  font-size: clamp(16px, 2vw, 24px);
+  border: 1px solid black;
+  overflow-y: auto;
 }
 
 /* Text styles for left panel */
 .name-title {
-  margin-bottom: 1rem;
-  font-size: 4.50rem;
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(2rem, 4.5vw, 4.50rem);
   font-weight: normal;
 }
 
@@ -69,13 +71,13 @@ html, body {
 
 .text-group {
   color: var(--orange-color);
-  margin-bottom: 1rem;
-  font-size: 24px;
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(16px, 2vw, 24px);
 }
 
 .large-name {
-  font-size: 6.50rem;
-  margin: 2rem 0;
+  font-size: clamp(3rem, 6.5vw, 6.50rem);
+  margin: clamp(1rem, 2vw, 2rem) 0;
   font-weight: 700;
 }
 
@@ -89,18 +91,18 @@ html, body {
 
 .company-text {
   color: var(--orange-color);
-  font-size: 24px;
-  margin-bottom: 1rem;
+  font-size: clamp(16px, 2vw, 24px);
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
 }
 
 /* Ontario Pride section */
 .ontario-pride {
   display: flex;
   flex-direction: row;
-  align-items: left;
+  align-items: center;
   justify-content: flex-start;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: clamp(1rem, 2vw, 2rem);
+  margin-top: clamp(1rem, 2vw, 2rem);
 }
 
 .ontario-pride::before {
@@ -110,8 +112,8 @@ html, body {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  width: 120px;
-  height: 120px;
+  width: clamp(60px, 10vw, 120px);
+  height: clamp(60px, 10vw, 120px);
   flex-shrink: 0;
   filter: invert(57%) sepia(87%) saturate(1401%) hue-rotate(346deg) brightness(101%) contrast(94%);
 }
@@ -120,7 +122,7 @@ html, body {
   content: 'Proud to be Ontarian\A Fiers d\'être Ontariens';
   white-space: pre;
   color: var(--orange-color);
-  font-size: 43px;
+  font-size: clamp(24px, 3vw, 43px);
   line-height: 1.2;
   text-align: left;
 }
@@ -128,4 +130,22 @@ html, body {
 /* Remove unwanted elements */
 header, footer, nav, aside {
   display: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .left-panel, .right-panel {
+    min-width: 100%;
+    height: auto;
+    min-height: 50vh;
+  }
+
+  .ontario-pride {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
