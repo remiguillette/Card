@@ -42,13 +42,13 @@ html, body {
 
 /* Layout */
 .content-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 32px);
   position: fixed;
-  top: 0;
+  top: 32px;
   left: 0;
-  justify-content: space-between; /* Ajout de cette ligne */
 }
 
 .left-panel {
