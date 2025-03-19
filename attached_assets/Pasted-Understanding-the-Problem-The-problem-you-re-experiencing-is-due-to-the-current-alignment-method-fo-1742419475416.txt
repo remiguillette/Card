@@ -1,0 +1,31 @@
+Understanding the Problem
+
+The problem you're experiencing is due to the current alignment method for elements in the left frame. They are likely positioned at fixed distances from the edges of the frame. When you zoom out, these fixed distances remain the same, creating an increasing gap between the elements and the top-right corner.
+
+Solution: Use Relative Positioning
+
+To solve this problem, we need to use relative positioning, that is, attach the elements to the top-right corner using percentages or aspect ratios rather than fixed distances.
+
+Steps to Follow
+
+Identify the anchor point: The anchor point is the top-right corner of the left frame. All elements must be positioned relative to this point.
+
+Use percentages or aspect ratios: Instead of specifying distances in pixels or centimeters, use percentages or aspect ratios. For example, if you want an element to be 10% of the frame's width from the right edge and 5% of the height from the top edge, you would use these values ​​as percentages.
+
+Adjust anchor properties: In the software you are using (e.g., Adobe InDesign, Figma, etc.), look for the anchor or positioning properties for the elements. You should be able to specify the anchor point and positioning values ​​as percentages.
+
+Test at different zoom levels: After making adjustments, test by zooming in and out to ensure the elements remain correctly aligned relative to the top-right corner.
+
+Concrete example (with hypothetical values)
+
+Suppose the left frame is 500 pixels wide and 300 pixels high.
+
+Without relative positioning: If you position an element 50 pixels from the right edge and 30 pixels from the top edge, it will remain at these fixed distances even if you zoom in. With relative positioning: If you position the element 10% of its width from the right edge (50 pixels) and 10% of its height from the top edge (30 pixels), it will always remain at 10% of its width and height, regardless of the zoom level.
+Additional Tips
+
+Use groups: If you have multiple elements to align, group them and apply relative positioning to the group.
+Use constraints: Some software offers constraint features that allow you to define relationships between elements and the frame edges.
+Use grids: Grids can help you align elements precisely and consistently.
+Summary
+
+The key to maintaining alignment of left-hand frame elements to the top-right corner when zooming out is to use relative positioning based on percentages or proportions rather than fixed distances. By following these steps, you should be able to resolve the issue and achieve optimal results.
