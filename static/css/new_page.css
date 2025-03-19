@@ -59,6 +59,15 @@ html, body {
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
   font-size: clamp(2rem, 4.5vw, 4.50rem);
   font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name-title .first,
+.name-title .last {
+  display: inline-block;
 }
 
 .name-title .first {
@@ -79,6 +88,15 @@ html, body {
   font-size: clamp(3rem, 6.5vw, 6.50rem);
   margin: clamp(1rem, 2vw, 2rem) 0;
   font-weight: 700;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.large-name .first,
+.large-name .last {
+  display: inline-block;
 }
 
 .large-name .first {
