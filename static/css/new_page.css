@@ -107,7 +107,7 @@ html, body {
 .text-group {
   color: var(--orange-color);
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(32px, 4vw, 48px);
 }
 
 .company-text {
