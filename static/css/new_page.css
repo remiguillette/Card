@@ -15,6 +15,13 @@
   font-display: swap;
 }
 
+/* CSS Variables */
+:root {
+  --blue-color: #0066cc;
+  --orange-color: #ff6600;
+  --black-color: #000000;
+}
+
 /* Base styles */
 html, body {
   margin: 0;
@@ -24,7 +31,7 @@ html, body {
   font-family: 'Tahoma', sans-serif;
 }
 
-/* Split screen container */
+/* Layout */
 .content-container {
   display: flex;
   width: 100%;
@@ -34,91 +41,61 @@ html, body {
   left: 0;
 }
 
-/* Left panel */
 .left-panel {
   flex: 1;
   min-width: 50%;
   height: 100%;
-  background-color: black;
+  background-color: var(--black-color);
   padding: clamp(1rem, 2vw, 2rem);
   color: var(--orange-color);
   font-size: clamp(16px, 2vw, 24px);
   overflow-y: auto;
 }
 
-/* Right panel */
 .right-panel {
   flex: 1;
   min-width: 50%;
   height: 100%;
   background-color: var(--orange-color);
   padding: clamp(1rem, 2vw, 2rem);
-  color: black;
+  color: var(--black-color);
   font-size: clamp(16px, 2vw, 24px);
   overflow-y: auto;
 }
 
-/* Text styles for left panel */
-.name-title {
-  margin-bottom: clamp(0.5rem, 1vw, 1rem);
-  font-size: clamp(2rem, 4.5vw, 4.50rem);
-  font-weight: normal;
+/* Text styles */
+.name-title, .large-name {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.name-title .first,
-.name-title .last {
-  display: inline-block;
-}
-
-.name-title .first {
-  color: var(--blue-color);
-}
-
-.name-title .last {
-  color: var(--orange-color);
-}
-
-.text-group {
-  color: var(--orange-color);
+.name-title {
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(2rem, 4.5vw, 4.50rem);
 }
 
 .large-name {
   font-size: clamp(3rem, 6.5vw, 6.50rem);
   margin: clamp(1rem, 2vw, 2rem) 0;
-  font-weight: 700;
-  font-family: 'Tahoma-Bold', 'Inter', sans-serif;
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-family: 'Tahoma-Bold', sans-serif;
 }
 
-.large-name .first,
-.large-name .last {
-  display: inline-block;
-}
-
-.large-name .first {
+.first {
   color: var(--blue-color);
 }
 
-.large-name .last {
+.last {
   color: var(--orange-color);
 }
 
-.company-text {
+.text-group, .company-text {
   color: var(--orange-color);
-  font-size: clamp(16px, 2vw, 24px);
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(16px, 2vw, 24px);
 }
 
-/* Right panel text styles */
 .right-title {
   font-family: 'Tahoma-Bold', sans-serif;
   font-size: clamp(24px, 3vw, 32px);
@@ -141,7 +118,6 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
   gap: clamp(1rem, 2vw, 2rem);
   margin-top: clamp(1rem, 2vw, 2rem);
 }
@@ -152,7 +128,6 @@ html, body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
   width: clamp(60px, 10vw, 120px);
   height: clamp(60px, 10vw, 120px);
   flex-shrink: 0;
@@ -165,15 +140,9 @@ html, body {
   color: var(--orange-color);
   font-size: clamp(24px, 3vw, 43px);
   line-height: 1.2;
-  text-align: left;
 }
 
-/* Remove unwanted elements */
-header, footer, nav, aside {
-  display: none !important;
-}
-
-/* Responsive adjustments */
+/* Responsive design */
 @media (max-width: 768px) {
   .content-container {
     flex-direction: column;
