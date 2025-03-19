@@ -23,6 +23,14 @@
 }
 
 /* Base styles */
+* {
+    -webkit-user-modify: read-only;
+    -moz-user-modify: read-only;
+    user-modify: read-only;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
 html, body {
   margin: 0;
   padding: 0;
