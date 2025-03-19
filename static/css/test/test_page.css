@@ -1,4 +1,7 @@
 
+/* Import base styles for variables and fonts */
+@import url('../new_page.css');
+
 /* Dev Banner */
 .dev-banner {
     position: fixed;
@@ -20,6 +23,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Tahoma', sans-serif;
 }
 
 .content-container {
@@ -46,17 +50,40 @@ body {
     color: var(--black-color);
 }
 
-/* Panel Content */
-.name-title, .large-name {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+/* Text Styles */
+.name-title {
+    font-size: min(6.8vw, 6.8rem);
+}
+
+.large-name {
+    font-size: min(6.875vw, 6.875rem);
+    font-family: 'Tahoma-Bold', sans-serif;
+}
+
+.first {
+    color: var(--blue-color);
+}
+
+.last {
+    color: var(--orange-color);
 }
 
 .text-group, .company-text {
-    flex-shrink: 0;
+    font-size: clamp(32px, 4vw, 48px);
 }
 
+.right-title, .right-subtitle {
+    font-family: 'Tahoma-Bold', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.right-info {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Ontario Pride */
 .ontario-pride {
     margin-top: auto;
     display: flex;
@@ -64,12 +91,29 @@ body {
     gap: 1rem;
 }
 
-/* Responsive Layout */
+.ontario-pride::before {
+    content: '';
+    background-image: url('/static/assets/beaver.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: clamp(60px, 10vw, 120px);
+    height: clamp(60px, 10vw, 120px);
+    filter: invert(57%) sepia(87%) saturate(1401%) hue-rotate(346deg) brightness(101%) contrast(94%);
+}
+
+.ontario-pride::after {
+    content: 'Proud to be Ontarian\A Fiers d\'être Ontariens';
+    white-space: pre;
+    font-size: clamp(24px, 3vw, 43px);
+    line-height: 1.2;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .content-container {
         flex-direction: column;
     }
-
+    
     .left-panel, .right-panel {
         flex: none;
         min-height: 50vh;
