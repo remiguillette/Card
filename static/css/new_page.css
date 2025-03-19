@@ -81,13 +81,13 @@ html, body {
 }
 
 .name-title {
-  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  margin: clamp(1rem, 2vw, 2rem) clamp(0.5rem, 1vw, 1rem);
   font-size: 6.8rem;
 }
 
 .large-name {
   font-size: 6.875rem;
-  margin: clamp(1rem, 2vw, 2rem) 0;
+  margin: clamp(2rem, 3vw, 3rem) clamp(0.5rem, 1vw, 1rem);
   font-family: 'Tahoma-Bold', sans-serif;
 }
 
