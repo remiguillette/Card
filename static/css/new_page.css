@@ -78,8 +78,14 @@ html, body {
 .name-title, .large-name {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
   width: 100%;
+  text-align: right;
+}
+
+.left-panel .name-title, .left-panel .large-name {
+  flex-direction: row;
 }
 
 .name-title {
