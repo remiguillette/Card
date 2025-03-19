@@ -1,0 +1,44 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove header and footer */
+header, footer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+}
+
+/* Set html and body to full dimensions */
+html, body {
+    width: 4096px;
+    height: 2160px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+/* Main content container */
+.content-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Ensure viewport maintains dimensions */
+@viewport {
+    width: 4096px;
+    height: 2160px;
+}
+
+/* Additional protection against unwanted elements */
+nav, aside {
+    display: none !important;
+}
