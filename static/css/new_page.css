@@ -75,9 +75,10 @@ html, body {
 
 /* Text styles */
 .name-title, .large-name {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   width: 100%;
-  text-align: left;
 }
 
 .name-title {
