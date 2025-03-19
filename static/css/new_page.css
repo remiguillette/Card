@@ -58,6 +58,8 @@ html, body {
   color: var(--orange-color);
   font-size: clamp(16px, 2vw, 24px);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .right-panel {
@@ -74,18 +76,17 @@ html, body {
 /* Text styles */
 .name-title, .large-name {
   display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  width: 100%;
+  text-align: left;
 }
 
 .name-title {
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
-  font-size: clamp(2rem, 4.5vw, 4.50rem);
+  font-size: clamp(4rem, 4.5vw, 4.50rem);
 }
 
 .large-name {
-  font-size: clamp(6.50rem, 6.5vw, 6.50rem);
+  font-size: clamp(4rem, 4.5vw, 4.50rem);
   margin: clamp(1rem, 2vw, 2rem) 0;
   font-family: 'Tahoma-Bold', sans-serif;
 }
