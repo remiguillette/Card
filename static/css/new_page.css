@@ -1,0 +1,60 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define color variables */
+:root {
+  --blue-color: #0d6efd;
+  --orange-color: #f89422;
+
+  /* Left panel text content */
+  --left-panel-title-first: 'Rémi';
+  --left-panel-title-last: 'Guillette';
+  --left-panel-text1: 'Group';
+  --left-panel-text2: 'Groupe';
+  --left-panel-text3-first: 'Rémi';
+  --left-panel-text3-last: 'Guillette';
+  --left-panel-text4: 'Public safety consulting firm';
+  --left-panel-text5: 'Cabinet-conseil en sécurité publique';
+  --left-panel-logo: url('/beaver.svg');
+}
+
+/* Base styles */
+html, body {
+  width: 4096px;
+  height: 2160px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Split screen container */
+.content-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left panel */
+.left-panel {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  padding: 2rem;
+}
+
+/* Right panel */
+.right-panel {
+  width: 50%;
+  height: 100%;
+  background-color: var(--orange-color);
+  padding: 2rem;
+}
+
+/* Remove unwanted elements */
+header, footer, nav, aside {
+  display: none !important;
+}
