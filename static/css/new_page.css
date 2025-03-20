@@ -24,8 +24,8 @@
 
 /* Set html and body to full dimensions */
 html, body {
-    width: 4096px;
-    height: 2160px;
+    width: 8192px;
+    height: 4320px;
     overflow: hidden;
     font-family: 'Tahoma', sans-serif;
     zoom: 1.0;
@@ -202,6 +202,6 @@ nav, aside {
 
 /* Ensure viewport maintains dimensions */
 @viewport {
-    width: device-width;
-    height: device-height;
+    width: 8192px;
+    height: 4320px;
 }
