@@ -52,11 +52,13 @@ html, body {
 
 /* Right panel with orange background */
 .right-panel {
-    background-color: #f89422;
+    background-color: #f89422 !important;
     width: 50%;
     height: 100%;
     padding: 2rem;
     color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 .name-title {
