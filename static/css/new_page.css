@@ -1,116 +1,39 @@
-/* Custom Font Declarations */
-@font-face {
-  font-family: 'Tahoma';
-  src: url('/static/assets/Tahoma.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Tahoma-Bold';
-  src: url('/static/assets/Tahoma-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* CSS Variables */
-:root {
-  --blue-color: #0d6efd;
-  --orange-color: #f89422;
-  --black-color: #000000;
-}
-
-/* Base styles */
-* {
-    -webkit-user-modify: read-only;
-    -moz-user-modify: read-only;
-    user-modify: read-only;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-html, body {
+body {
   margin: 0;
-  padding: 0;
-  overflow: hidden;
+  font-family: sans-serif;
   height: 100vh;
-  font-family: 'Tahoma', sans-serif;
 }
 
-/* Layout */
-.content-container {
+.container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+  height: 100%;
 }
 
-.left-panel {
-  width: 50%;
-  height: 100%;
-  background-color: var(--black-color);
-  padding: min(2vw, 2rem);
-  color: var(--orange-color);
-  font-size: min(2vw, 24px);
-  overflow-y: auto;
+.panel {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 1vh;
-}
-
-.right-panel {
-  width: 50%;
-  height: 100%;
-  background-color: var(--orange-color);
-  padding: min(2vw, 2rem);
-  color: var(--black-color);
-  font-size: min(2vw, 24px);
-  overflow-y: auto;
-}
-
-/* Text styles */
-.name-title, .large-name {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  width: 100%;
-  text-align: left;
 }
 
-.left-panel .name-title, .left-panel .large-name {
-  flex-direction: row;
+.left {
+  background-color: black;
+  color: orange;
 }
 
-.name-title {
-  margin: 0;
-  font-size: min(6.8vw, 6.8rem);
+.right {
+  background-color: orange;
+  color: black;
 }
 
-.large-name {
-  font-size: min(6.875vw, 6.875rem);
-  margin: 0;
-  font-family: 'Tahoma-Bold', sans-serif;
+/* Nouveau style pour le conteneur de texte */
+.text-container {
+  text-align: center; /* Centre le texte horizontalement */
+  width: 100%; /* Assure que le conteneur prend toute la largeur du panneau */
 }
 
-.first, .last {
-  font-weight: 700;
-}
-
-.first {
-  color: var(--blue-color);
-}
-
-.last {
-  color: var(--orange-color);
-}
-
+/* Vos autres styles restent les mêmes */
 .text-group {
   color: var(--orange-color);
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
@@ -130,14 +53,14 @@ html, body {
   font-weight: 700;
 }
 
-.right-subtitle {
+right-subtitle {
   font-family: 'Tahoma-Bold', sans-serif;
   font-size: 4rem;
   margin-bottom: 2rem;
   font-weight: 700;
 }
 
-.right-info {
+right-info {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
@@ -146,8 +69,8 @@ html, body {
 .ontario-pride {
   display: flex;
   flex-direction: row;
-  align-items: left;
-  justify-content: flex-start;
+  align-items: center; /* Centre verticalement l'icône et le texte */
+  justify-content: center; /* Centre horizontalement l'icône et le texte */
   gap: clamp(1rem, 2vw, 2rem);
   margin-top: clamp(1rem, 2vw, 2rem);
   width: 100%;
@@ -158,7 +81,7 @@ html, body {
   background-image: url('/static/assets/beaver.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center; /* Centre l'icône dans son espace */
   width: clamp(60px, 10vw, 120px);
   height: clamp(60px, 10vw, 120px);
   flex-shrink: 0;
@@ -171,22 +94,4 @@ html, body {
   color: var(--orange-color);
   font-size: clamp(24px, 3vw, 43px);
   line-height: 1.2;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .content-container {
-    flex-direction: column;
-  }
-
-  .left-panel, .right-panel {
-    min-width: 100%;
-    height: auto;
-    min-height: 50vh;
-  }
-
-  .ontario-pride {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
