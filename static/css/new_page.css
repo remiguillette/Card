@@ -24,10 +24,13 @@
 
 /* Set html and body to full dimensions */
 html, body {
-    width: 100%;
-    height: 100%;
+    width: 4096px;
+    height: 2160px;
     overflow: hidden;
     font-family: 'Tahoma', sans-serif;
+    zoom: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 /* Main content container */
