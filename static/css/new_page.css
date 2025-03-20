@@ -52,10 +52,10 @@ html, body {
 
 /* Right panel with orange background */
 .right-panel {
-    background-color: #f89422 !important;
+    background-color: #f89422;
     width: 50%;
     height: 100%;
-    padding: 2rem;
+    padding: 4rem;
     color: black;
     display: flex;
     flex-direction: column;
@@ -125,20 +125,22 @@ html, body {
 }
 
 .right-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    font-family: 'Tahoma-Bold', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .right-subtitle {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-family: 'Tahoma-Bold', sans-serif;
+    font-size: 4rem;
     margin-bottom: 2rem;
+    font-weight: 700;
 }
 
 .right-info {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* Responsive layout for smaller screens */
