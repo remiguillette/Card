@@ -38,22 +38,27 @@ body {
 .name-title {
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
     margin-bottom: 10px;
 }
 
 .text-group {
     font-size: 16px;
+    font-style: italic;
+    text-align: center;
     margin-bottom: 5px;
 }
 
 .right-title {
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
     margin-bottom: 10px;
 }
 
 .right-info {
     font-size: 16px;
+    text-align: center;
     margin-bottom: 5px;
 }
 
